@@ -18,7 +18,7 @@ describe('Lesson05 - Homework', () => {
         '#firstname': 'Dao',
         '#middlename': 'Duc',
         '#lastname': 'Luong',
-        '#email_address': '111111111@gmail.com'
+        '#email_address': '222@gmail.com'
     });
     cy.fillPassWord({
         '#password': '123456789',

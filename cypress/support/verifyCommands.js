@@ -5,10 +5,11 @@ Cypress.Commands.add('verifyPageLogo', (selector, attr) => {
 })
 
 Cypress.Commands.add('verifyHeader', () => {
-  cy.get('.page-title').find('h1')
+  cy.get('.page-title')
+    .find('h1');
 })
 
 Cypress.Commands.add('verifyMessage', (text) => {
   cy.get('.success-msg span')
-    .should('contains.text','');
+    .should('contains.text', text);
 })

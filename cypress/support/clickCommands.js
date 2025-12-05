@@ -1,6 +1,7 @@
 Cypress.Commands.add('clickAccount', () => {
   cy.get('.account-cart-wrapper')
-    .find('a.skip-link.skip-account').click();
+    .find('a.skip-link.skip-account')
+    .click();
 });
 
 Cypress.Commands.add('clickLogin', () => {
