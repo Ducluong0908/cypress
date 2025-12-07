@@ -15,6 +15,6 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import './clickCommands'
-import './verifyCommands'
-import './fillTextCommands'
+import './click'
+import './assert'
+import './type'

@@ -27,6 +27,6 @@ describe('Lesson05 - Homework', () => {
     cy.clickRegister();
 
     //Verify register successfully
-    cy.verifyMessage('Thank you for registering');
+    cy.verifyMessage('.success-msg span', 'Thank you for registering');
   })
 })

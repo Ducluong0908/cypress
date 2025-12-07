@@ -1,0 +1,43 @@
+[
+{
+    "productName": "Brocolli - 1 Kg",
+    "price": "120",
+    "quantity": "1",
+    "img": "./images/broccoli.jpg"
+},
+    
+{
+    "productName": "Cauliflower - 1 Kg",
+    "price": "60",
+    "quantity": "2",
+    "img": "./images/cauliflower.jpg"
+},
+
+{
+    "productName": "Cucumber - 1 Kg",
+    "price": "48",
+    "quantity": "3",
+    "img": "./images/cucumber.jpg"
+},
+
+{
+    "productName": "Beetroot - 1 Kg",
+    "price": "32",
+    "quantity": "4",
+    "img": "./images/beetroot.jpg"
+},
+
+{
+    "productName": "Carrot - 1 Kg",
+    "price": "56",
+    "quantity": "5",
+    "img": "./images/carrots.jpg"
+},
+
+{
+    "productName": "Tomato - 1 Kg",
+    "price": "16",
+    "quantity": "6",
+    "img": "./images/tomato.jpg"
+}
+]
