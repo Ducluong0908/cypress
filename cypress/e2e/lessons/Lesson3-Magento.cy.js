@@ -1,4 +1,4 @@
-describe('Lesson03 - Homework', () => {
+describe('Lesson03 - Techpanda', () => {
   it('E2E Process', () => {
     //1. Open link
     cy.visit('http://live.techpanda.org/index.php/mobile.html')

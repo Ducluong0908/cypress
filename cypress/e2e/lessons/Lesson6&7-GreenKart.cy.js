@@ -1,4 +1,4 @@
-describe('Lesson06 - Homework', () => {
+describe('Lesson06 - rahulshettyacademy', () => {
   beforeEach(() => {
     cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/');
   });
