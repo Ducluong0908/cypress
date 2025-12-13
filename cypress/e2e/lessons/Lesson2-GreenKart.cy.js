@@ -1,4 +1,4 @@
-describe('Lesson02 - rahulshettyacademy', () => {
+describe('Green Kart - e2e test', () => {
   it('E2E Process', () => {
     //Open link
     cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')

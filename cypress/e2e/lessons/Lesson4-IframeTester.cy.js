@@ -1,6 +1,6 @@
 import 'cypress-iframe';
 
-describe('lesson04 - iframe practice', () => {
+describe('Iframe practice', () => {
   it.skip('Test 01', () => {
     //1. Open link
     cy.visit('http://iframetester.com/');

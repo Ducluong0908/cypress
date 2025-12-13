@@ -1,4 +1,4 @@
-describe('Lesson05 - Techpanda', () => {
+describe('Magento - e2e test', () => {
   it('E2E Process', () => {
     //Open link
     cy.visit('https://live.techpanda.org/');
