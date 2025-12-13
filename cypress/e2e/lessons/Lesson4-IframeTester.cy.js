@@ -1,7 +1,7 @@
 import 'cypress-iframe';
 
 describe('Iframe practice', () => {
-  it.skip('Test 01', () => {
+  it('Test 01', () => {
     //1. Open link
     cy.visit('http://iframetester.com/');
  
