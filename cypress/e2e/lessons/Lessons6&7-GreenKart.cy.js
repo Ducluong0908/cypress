@@ -28,25 +28,25 @@ describe('GreenKart - e2e test with POM', () => {
     })
 
     //Task 3: Go to Checkout
-        //3.1. Click Cart and verify
+    //3.1. Click Cart and verify
     homePage.clickCart();
     cy.get('.empty-cart h2').should('not.exist');
 
-        //3.2. Verify redirection
+    //3.2. Verify redirection
     homePage.clickProceed();
     cartPage.verifyUrl('/cart');
 
     //Task 4: Handle the table
-        //4.1.Verify Table Header
+    //4.1.Verify Table Header
     const expectedHeader = ['#', 'Product Name', 'Quantiry', 'Price', 'Total']
     cartPage.verifyHeaderColumns(expectedHeader);
 
-        //4.2. Verify Product Image
+    //4.2. Verify Product Image
     this.productData.forEach((item) => {
         cartPage.verifyProductImages(item.productName, item.img);
     })
         
-        //4.3. Get Product Name, Quanity, Price, Total and log each row
+    //4.3. Get Product Name, Quanity, Price, Total and log each row
     this.productData.forEach((item) => {
         cartPage.getProductName(item.index).then((name) => {
             cartPage.getQty(item.index).then((qty) => {
@@ -59,11 +59,11 @@ describe('GreenKart - e2e test with POM', () => {
         })
     })
         
-        //4.4. Assert number of rows are equal number of items in fixture
+    //4.4. Assert number of rows are equal number of items in fixture
     const expectedLength = this.productData.length;
     cartPage.verifyNumberOfRows(expectedLength);
 
-        //4.5. Assert total = price * quantity
+    //4.5. Assert total = price * quantity
     this.productData.forEach((item) => {
         const expectedTotal = Number(item.quantity) * Number(item.price);
         cartPage.getTotal(item.productName).then((total) => {
@@ -72,20 +72,20 @@ describe('GreenKart - e2e test with POM', () => {
         })
     })
 
-        //4.6. Click Place Order and assert redirection
+    //4.6. Click Place Order and assert redirection
     cy.contains('Place Order').click();
     countryPage.verifyUrl('/country');
 
     //Task 5: Checkout
-        //5.1. Verify the error message
+    //5.1. Verify the error message
     cy.get('select').select('Vietnam');
     cy.contains('Proceed').click();
     countryPage.verifyErrorMsg('Please accept Terms & Conditions - Required');
 
-        //5.2.
+    //5.2. Complete checkout process
     cy.get('.chkAgree').click();
     cy.contains('Proceed').click();
     countryPage.verifySuccessMsg('Thank you, your order has been placed successfully');
-
+    
   })
 })

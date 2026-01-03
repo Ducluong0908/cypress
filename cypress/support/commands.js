@@ -32,7 +32,42 @@ Cypress.Commands.add('getIframeBody', (iframeSelector) => {
     .then(cy.wrap);
 });
 
-
-
-
-
+//generate a random email
+Cypress.Commands.add('randomEmail', () => {
+  const random = crypto.randomUUID(); //generate a random uuid
+  const email = `user_${random}@gmail.com`; //return an email including the uuid
+  return cy.wrap(email)
+})
+ 
+//getPageLogo
+Cypress.Commands.add('getPageLogo', () => {
+  cy.get('.logo')
+    .find('img');
+})
+ 
+//getHeaderTitle
+Cypress.Commands.add('getPageHeader', () => {
+  cy.get('.page-title')
+    .find('h1');
+})
+ 
+//getMessage
+Cypress.Commands.add('getMessage', () => {
+  cy.get('.success-msg').find('span');
+})
+ 
+//find Account filed
+Cypress.Commands.add('findAccount', () => {
+  cy.get('.account-cart-wrapper')
+    .find('a.skip-link.skip-account');
+})
+ 
+//find Login filed
+Cypress.Commands.add('findLogin', () => {
+  cy.get('a[title="Log In"]');
+})
+ 
+//find Create An Account button
+Cypress.Commands.add('findCreateAccount', () => {
+  cy.get('a[title="Create an Account"]');
+})

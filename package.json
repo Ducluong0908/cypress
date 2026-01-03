@@ -14,5 +14,9 @@
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^4.0.2",
     "iframe": "^1.0.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "rgb-hex": "^4.1.0"
   }
 }
